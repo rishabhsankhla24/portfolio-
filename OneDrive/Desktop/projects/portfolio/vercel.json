@@ -1,0 +1,11 @@
+{
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Rishabh Sankhla _ 3D AI Portfolio.html"
+    }
+  ]
+}
