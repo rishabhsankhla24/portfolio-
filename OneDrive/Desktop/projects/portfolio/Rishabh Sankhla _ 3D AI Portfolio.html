@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishabh Sankhla | 3D AI Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Rishabh Sankhla _ 3D AI Portfolio_files/css2" rel="stylesheet">
+<script src="./Rishabh Sankhla _ 3D AI Portfolio_files/three.min.js.download"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+cursor:none;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+.cursor{
+width:20px;
+height:20px;
+border:2px solid #a855f7;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:99999;
+box-shadow:0 0 20px #a855f7;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.03);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#a855f7;
+text-shadow:0 0 20px #a855f7;
+}
+
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.4s;
+}
+
+nav ul li a:hover{
+color:#a855f7;
+}
+
+.btn{
+padding:14px 30px;
+border:none;
+border-radius:50px;
+background:#a855f7;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 35px rgba(168,85,247,0.8);
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+}
+
+.hero h1{
+font-size:90px;
+line-height:1.1;
+margin-bottom:30px;
+background:linear-gradient(to right,#fff,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:750px;
+margin:auto;
+line-height:1.8;
+color:#aaa;
+}
+
+.hero-small{
+color:#a855f7;
+letter-spacing:4px;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+section{
+padding:120px 8%;
+position:relative;
+z-index:10;
+}
+
+.section-title{
+font-size:60px;
+text-align:center;
+margin-bottom:80px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.card{
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+transition:0.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 60px rgba(168,85,247,0.35);
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.project-image{
+height:250px;
+border-radius:20px;
+margin-bottom:25px;
+background:linear-gradient(135deg,#7e22ce,#050505);
+}
+
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.skill{
+padding:15px 30px;
+border-radius:50px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(168,85,247,0.2);
+}
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#777;
+}
+
+@media(max-width:768px){
+nav ul{
+display:none;
+}
+.hero h1{
+font-size:50px;
+}
+.section-title{
+font-size:40px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor" style="left: 1049px; top: 641px;"></div>
+
+<nav>
+<div class="logo">RS</div>
+
+<ul>
+<li><a href="file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html#about">About</a></li>
+<li><a href="file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html#services">Services</a></li>
+<li><a href="file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html#projects">Projects</a></li>
+<li><a href="file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html#skills">Skills</a></li>
+<li><a href="file:///C:/Users/ASUS-PC/Downloads/rishabh_3d_ai_portfolio%20(1).html#contact">Contact</a></li>
+</ul>
+
+<button class="btn">Start Project</button>
+</nav>
+
+<section class="hero">
+<div>
+<div class="hero-small">FRONTEND • AI/ML • AWS</div>
+
+<h1>
+Building Intelligent
+<br>
+Digital Experiences
+</h1>
+
+<p>
+Hi, I’m Rishabh Sankhla — Frontend Developer,
+AI/ML Enthusiast, and AWS Cloud Learner creating futuristic immersive web experiences.
+</p>
+
+<div class="hero-buttons">
+<button class="btn">View Projects</button>
+<button class="btn">Download Resume</button>
+</div>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Rishabh Sankhla</h3>
+<p>
+Pre-final year Computer Science student passionate about Frontend Development,
+Artificial Intelligence, Cloud Computing, and futuristic user experiences.
+</p>
+</div>
+
+<div class="card">
+<h3>AWS Internship</h3>
+<p>
+Worked on AWS cloud deployment, ML optimization,
+and scalable workflows during internship at Regex Software.
+</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Frontend Development</h3>
+<p>Modern responsive cinematic UI experiences.</p>
+</div>
+
+<div class="card">
+<h3>AI/ML Solutions</h3>
+<p>Machine learning powered smart systems.</p>
+</div>
+
+<div class="card">
+<h3>AWS Cloud</h3>
+<p>Scalable cloud deployment and automation.</p>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="project-image"></div>
+<h3>Voice Emotion Detection</h3>
+<p>Python • Streamlit • Machine Learning</p>
+</div>
+
+<div class="card">
+<div class="project-image"></div>
+<h3>Face Recognition System</h3>
+<p>AWS • Rekognition • EC2</p>
+</div>
+
+<div class="card">
+<div class="project-image"></div>
+<h3>Contact Management</h3>
+<p>HTML • CSS • PHP • MySQL</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+<div class="skill">ReactJS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">AWS</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">SQL</div>
+<div class="skill">Flask</div>
+<div class="skill">Tailwind CSS</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Let’s Build Something Amazing</h2>
+
+<div style="text-align:center;">
+<p style="color:#aaa;margin-bottom:30px;">
+rishabhsankhla13@gmail.com
+</p>
+
+<button class="btn">Contact Me</button>
+</div>
+</section>
+
+<footer>
+Designed &amp; Developed by Rishabh Sankhla
+</footer>
+
+<script>
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({
+alpha:true,
+antialias:true
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const particlesGeometry = new THREE.BufferGeometry();
+const particlesCount = 5000;
+const posArray = new Float32Array(particlesCount * 3);
+
+for(let i=0;i<particlesCount*3;i++){
+posArray[i] = (Math.random() - 0.5) * 10;
+}
+
+particlesGeometry.setAttribute(
+'position',
+new THREE.BufferAttribute(posArray,3)
+);
+
+const particlesMaterial = new THREE.PointsMaterial({
+size:0.015,
+color:"#a855f7",
+transparent:true,
+opacity:0.8
+});
+
+const particlesMesh = new THREE.Points(
+particlesGeometry,
+particlesMaterial
+);
+
+scene.add(particlesMesh);
+
+const geometry = new THREE.TorusGeometry(1,0.3,16,100);
+
+const material = new THREE.MeshStandardMaterial({
+color:0xa855f7,
+wireframe:true
+});
+
+const torus = new THREE.Mesh(geometry,material);
+scene.add(torus);
+
+const pointLight = new THREE.PointLight(0xffffff,1);
+pointLight.position.set(5,5,5);
+scene.add(pointLight);
+
+camera.position.z = 3;
+
+let mouseX = 0;
+let mouseY = 0;
+
+document.addEventListener("mousemove",(event)=>{
+
+mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+const cursor = document.querySelector(".cursor");
+
+cursor.style.left = event.clientX + "px";
+cursor.style.top = event.clientY + "px";
+
+});
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+particlesMesh.rotation.y += 0.0008;
+particlesMesh.rotation.x += 0.0003;
+
+torus.rotation.x += 0.01;
+torus.rotation.y += 0.005;
+
+torus.position.x = mouseX * 0.5;
+torus.position.y = mouseY * 0.5;
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+window.addEventListener("resize",()=>{
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+camera.aspect = window.innerWidth/window.innerHeight;
+
+camera.updateProjectionMatrix();
+
+});
+</script><canvas width="1920" height="945" style="display: block; width: 1920px; height: 945px;"></canvas>
+
+
+</body></html>
